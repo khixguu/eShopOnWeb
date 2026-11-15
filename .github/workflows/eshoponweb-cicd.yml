@@ -79,10 +79,10 @@ jobs:
       - name: deploy
         uses: azure/arm-deploy@v2
         with:
-          subscriptionId: ${{ env.SUBSCRIPTION-ID }}
-          resourceGroupName: ${{ env.RESOURCE-GROUP }}
+          subscriptionId: 5e5a5ad3-6a6c-42cb-98dc-5e0cc91d4bcd
+          resourceGroupName: rg-eshoponweb-smd
           template: bicep-template/webapp.bicep
-          parameters: "webAppName=${{ env.WEBAPP-NAME }} location=${{ env.LOCATION }}"
+          parameters: "webAppName=eshoponweb-webapp-khii location=westus2"
           failOnStdErr: false
 
       # Publish website to Azure App Service (WebApp)
